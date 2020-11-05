@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 4011;
+var port = process.env.PORT || 4011;
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient
@@ -14,7 +14,7 @@ app.use(bodParser.json());
 
 
 app.get('/',(req,res) =>{
-    res.send(`<a href="http://localhost:7800/location" target="_blank">City</a> <br/> <a href="http://localhost:7800/mealtype" target="_blank">MealType</a> <br/> <a href="http://localhost:7800/cuisine" target="_blank">Cuisine</a> <br/> <a href="http://localhost:7800/restaurents" target="_blank">Restaurents</a> <br/> <a href="http://localhost:4011/orders" target="_blank">Orders</a>`)
+    res.send(`<a href="http://localhost:4011/location" target="_blank">City</a> <br/> <a href="http://localhost:4011/mealtype" target="_blank">MealType</a> <br/> <a href="http://localhost:4011/cuisine" target="_blank">Cuisine</a> <br/> <a href="http://localhost:4011/restaurents" target="_blank">Restaurents</a> <br/> <a href="http://localhost:4011/orders" target="_blank">Orders</a>`)
 });
 
 //list of city

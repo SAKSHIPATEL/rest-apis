@@ -4,7 +4,7 @@ var port = process.env.PORT || 7800;
 var bodParser = require('body-parser');
 var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient
-var mongourl = "mongodb+srv://root:mongodb619@cluster0.hctio.mongodb.net/edumato?retryWrites=true&w=majority";
+var mongourl = "mongodb+srv://admin:mongo@123@cluster0.sxl99.mongodb.net/edumato?retryWrites=true&w=majority";
 var cors = require('cors');
 var db;
 
